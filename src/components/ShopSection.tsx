@@ -119,7 +119,7 @@ const ShopSection = () => {
 
                 {/* Add to Cart Button */}
                 <Button
-                  className="w-full bg-lavender hover:bg-lavender/80 text-forest font-sans font-medium rounded-lg"
+                  className="w-full bg-amber hover:bg-amber/90 text-white font-sans font-medium rounded-lg"
                 >
                   <ShoppingCart className="w-4 h-4 mr-2" />
                   Añadir al carrito
