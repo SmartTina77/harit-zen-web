@@ -66,6 +66,8 @@ export default {
           dark: "hsl(var(--cream-dark))",
         },
         gold: "hsl(var(--gold))",
+        amber: "hsl(var(--amber))",
+        lavender: "hsl(var(--lavender))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
