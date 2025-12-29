@@ -46,25 +46,25 @@ const products = [
 
 const ShopSection = () => {
   return (
-    <section id="tienda" className="py-20 md:py-28 bg-forest">
+    <section id="tienda" className="py-20 md:py-28 bg-gradient-to-b from-cream to-lilac-light/30">
       <div className="container mx-auto px-6 md:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="text-gold font-sans uppercase tracking-[0.2em] text-sm font-medium">
+          <span className="text-amber font-sans uppercase tracking-[0.2em] text-sm font-medium">
             Tienda Online
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl text-cream mt-4 mb-6">
+          <h2 className="font-serif text-4xl md:text-5xl text-forest mt-4 mb-6">
             Productos Seleccionados
           </h2>
-          <div className="w-16 h-1 bg-gold mx-auto mb-6" />
-          <p className="text-cream/80 font-sans max-w-2xl mx-auto text-lg">
+          <div className="w-16 h-1 bg-amber mx-auto mb-6" />
+          <p className="text-muted-foreground font-sans max-w-2xl mx-auto text-lg">
             Suplementos ayurvédicos de máxima calidad para nutrir tu cuerpo y mente.
           </p>
           
           {/* Discount Badge */}
-          <div className="inline-flex items-center gap-2 mt-8 bg-forest-light/20 border border-gold/30 rounded-full px-6 py-3">
-            <span className="text-gold font-semibold">%</span>
-            <span className="text-cream font-sans">20% de Descuento en productos seleccionados</span>
+          <div className="inline-flex items-center gap-2 mt-8 bg-amber/10 border border-amber/30 rounded-full px-6 py-3">
+            <span className="text-amber font-semibold">%</span>
+            <span className="text-forest font-sans">20% de Descuento en productos seleccionados</span>
           </div>
         </div>
 
@@ -73,17 +73,17 @@ const ShopSection = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-cream rounded-2xl overflow-hidden shadow-card card-hover group"
+              className="bg-white rounded-2xl overflow-hidden shadow-card card-hover group border border-border/50"
             >
               {/* Product Image Area */}
-              <div className="relative bg-sage-light/50 p-8 flex items-center justify-center min-h-[180px]">
+              <div className="relative bg-sage-light/40 p-8 flex items-center justify-center min-h-[180px]">
                 {/* Discount Badge */}
-                <span className="absolute top-4 right-4 bg-gold text-forest text-xs font-bold px-3 py-1 rounded-full">
+                <span className="absolute top-4 right-4 bg-amber text-white text-xs font-bold px-3 py-1 rounded-full">
                   -{product.discount}%
                 </span>
                 
                 {/* Product Icon */}
-                <div className="w-20 h-20 bg-sage/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-20 h-20 bg-lavender/30 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Package className="w-10 h-10 text-forest" />
                 </div>
               </div>
@@ -92,7 +92,7 @@ const ShopSection = () => {
               <div className="p-5">
                 {/* Rating */}
                 <div className="flex items-center gap-1 mb-2">
-                  <Star className="w-4 h-4 fill-gold text-gold" />
+                  <Star className="w-4 h-4 fill-amber text-amber" />
                   <span className="text-forest font-semibold text-sm">{product.rating}</span>
                   <span className="text-muted-foreground text-sm">({product.reviews})</span>
                 </div>
@@ -119,7 +119,7 @@ const ShopSection = () => {
 
                 {/* Add to Cart Button */}
                 <Button
-                  className="w-full bg-sage hover:bg-sage-dark text-cream font-sans rounded-lg"
+                  className="w-full bg-lavender hover:bg-lavender/80 text-forest font-sans font-medium rounded-lg"
                 >
                   <ShoppingCart className="w-4 h-4 mr-2" />
                   Añadir al carrito
@@ -132,9 +132,8 @@ const ShopSection = () => {
         {/* CTA Button */}
         <div className="text-center">
           <Button
-            variant="outline"
             size="lg"
-            className="border-cream/30 text-cream hover:bg-cream/10 font-sans rounded-full px-8"
+            className="bg-amber hover:bg-amber/90 text-white font-sans font-semibold rounded-full px-8 shadow-lg"
           >
             Ver Toda la Tienda
           </Button>
